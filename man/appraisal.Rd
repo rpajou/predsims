@@ -5,7 +5,7 @@
 \title{appraisal}
 \usage{
 appraisal(observed, LP, plots = TRUE, title = "", weight = rep(1,
-  length(obs)))
+  length(observed)))
 }
 \arguments{
 \item{observed}{Number of observations in the data set.}

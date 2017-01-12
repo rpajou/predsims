@@ -34,22 +34,22 @@
 #' LP <- m$coef[1] + m$coef[2]*v$X1 + m$coef[3]*v$X2
 #' appraisal(obs = v$Y, LP = LP, plots = TRUE, title = "Calibration plot")
 
-appraisal <- function(observed, LP, plots = TRUE, title = "", weight = rep(1, length(obs))){
+appraisal <- function(observed, LP, plots = TRUE, title = "", weight = rep(1, length(observed))){
 
   sum.tab <- matrix(rep(NA, 2), nrow = 1)
   colnames(sum.tab) <- c("O/E ratio", "C index")
 
   pred <- 1 / (1 + exp(- LP))
 
-  sum.tab[1] <- (sum(obs * weight) / sum(weight)) / (sum(pred * weight) / sum(weight))
+  sum.tab[1] <- (sum(observed * weight) / sum(weight)) / (sum(pred * weight) / sum(weight))
 
-  c.total <- somers2(LP, obs, weights = weight)
+  c.total <- somers2(LP, observed, weights = weight)
   sum.tab[2] <- c.total[1]
 
   if(plots){ #calibration plot
 
     predw <- rep(pred, round(weight))
-    obsw <- rep(obs, round(weight))
+    obsw <- rep(observed, round(weight))
     minidf <- data.frame(cbind(obsw, predw))
     minidf <- minidf[with(minidf, order(predw)),]
     dec.pred <- dec.obs <- c()
