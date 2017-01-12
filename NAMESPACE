@@ -2,3 +2,5 @@
 
 export(appraisal)
 export(datafy)
+importFrom(Hmisc,somers2)
+importFrom(MASS,mvrnorm)

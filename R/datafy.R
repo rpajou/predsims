@@ -7,7 +7,7 @@
 #'
 #' Currently supports the generation of correlated continuous, normally distributed
 #' predictor variables and a binary outcome.
-#' @importsFrom MASS mvrnorm
+#' @importFrom MASS mvrnorm
 #'
 #' @param obs        Number of observations in the data set.
 #' @param means      A vector of predictor means.

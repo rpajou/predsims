@@ -7,7 +7,7 @@
 #'
 #' This function is currently only compatible with logistic regression models.
 #'
-#' @importsFrom Hmisc somers2
+#' @importFrom Hmisc somers2
 #'
 #' @param observed  Number of observations in the data set.
 #' @param LP        Calculated linear predictor for all indiviuals in the data set
