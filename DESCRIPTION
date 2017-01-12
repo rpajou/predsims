@@ -1,0 +1,13 @@
+Package: predsims
+Type: Package
+Title: Tools for prediction model simulation studies
+Version: 0.1
+Date: 2017-01-12
+Author: Romin Pajouheshnia
+Maintainer: Romin Pajouheshnia <r.pajou@gmail.com>
+Description: Provides functions for data generation, prediction model development, validation and updating, within a simulation framework
+Imports: Hmisc, rms, MASS
+Suggests: kintr, testthat, rmarkdown
+License: GPL-2
+LazyData: TRUE
+RoxygenNote: 5.0.1
